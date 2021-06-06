@@ -163,9 +163,9 @@ except Exception as e:
 def get_area(polygon):
   """
   parameter : polygon
-  Purpose   : create area
+  Purpose   : calculate area
   """
-  assert type(polygon) == "list", "Input should be a Shapely Polygon -object!"
+  assert type() == "Polygon", "Input should be a Shapely Polygon -object!"
   return polygon.area
 
 # Test and demonstrate the usage of the function:
@@ -193,6 +193,10 @@ except Exception as e:
 
 #  YOUR CODE HERE 9 to define get_length()
 def get_length(geom):
+  """
+  parameter : geom
+  Purpose   : calculate length
+  """
   if geom.geom_type == 'LineString':
     return geom.length
   elif geom.geom_type == 'Polygon':
